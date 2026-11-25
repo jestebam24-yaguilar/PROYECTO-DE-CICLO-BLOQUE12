@@ -1,0 +1,31 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package utilitario;
+import clases.Empleado;
+import gestion.GestionEmpleado;
+//Clases de Cueto
+
+//Clases de Juan Esteban
+
+
+
+
+
+/**
+ *
+ * @author Lee
+ */
+public class Sistema {
+    //Objetos de gestion compartidos: todas las ventanas usan los mismos arreglos
+    public static GestionEmpleado gestionEmpleado = new GestionEmpleado();
+    
+    //Gestiones de Cueto: proyectos, unidades, adicionales y postventa
+    
+    //Gestiones de Juan Esteban: clientes y ventas
+    
+    //Empleado que inicio sesion
+    public static Empleado empleadoActual;
+    
+}
