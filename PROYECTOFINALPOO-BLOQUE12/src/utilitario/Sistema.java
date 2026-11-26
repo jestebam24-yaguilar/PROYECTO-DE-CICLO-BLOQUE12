@@ -8,6 +8,7 @@ import gestion.GestionEmpleado;
 //Clases de Cueto
 
 //Clases de Juan Esteban
+import gestion.GestionCliente;
 
 
 
@@ -24,6 +25,7 @@ public class Sistema {
     //Gestiones de Cueto: proyectos, unidades, adicionales y postventa
     
     //Gestiones de Juan Esteban: clientes y ventas
+    public static GestionCliente gestionCliente = new GestionCliente();
     
     //Empleado que inicio sesion
     public static Empleado empleadoActual;
