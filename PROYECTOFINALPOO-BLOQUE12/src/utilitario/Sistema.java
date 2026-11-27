@@ -12,7 +12,7 @@ import gestion.GestionAdicional;
 
 //Clases de Juan Esteban
 import gestion.GestionCliente;
-
+import gestion.GestionVenta;
 
 
 
@@ -26,9 +26,13 @@ public class Sistema {
     public static GestionEmpleado gestionEmpleado = new GestionEmpleado();
     
     //Gestiones de Cueto: proyectos, unidades, adicionales y postventa
+    public static GestionProyecto gestionProyecto = new GestionProyecto();
+    public static GestionUnidad gestionUnidad = new GestionUnidad();
+    public static GestionAdicional gestionAdicional = new GestionAdicional();
     
     //Gestiones de Juan Esteban: clientes y ventas
     public static GestionCliente gestionCliente = new GestionCliente();
+    public static GestionVenta gestionVenta = new GestionVenta();
     
     //Empleado que inicio sesion
     public static Empleado empleadoActual;
