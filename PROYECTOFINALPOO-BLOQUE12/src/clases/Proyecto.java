@@ -8,7 +8,7 @@ import java.time.LocalDate;
 
 /**
  *
- * @author Antonio
+ * @author Cueto
  */
 public class Proyecto {
     private String codigo;
@@ -19,7 +19,8 @@ public class Proyecto {
     private int cantidadPisos;
     private LocalDate fechaEntrega;
 
-    public Proyecto(String codigo, String nombre, String direccion, String distrito, int cantidadTorres, int cantidadPisos, LocalDate fechaEntrega) {
+    public Proyecto(String codigo, String nombre, String direccion, String distrito,
+            int cantidadTorres, int cantidadPisos, LocalDate fechaEntrega) {
         this.codigo = codigo;
         this.nombre = nombre;
         this.direccion = direccion;
@@ -65,10 +66,6 @@ public class Proyecto {
         return cantidadTorres;
     }
 
-    public void setCantidadTorres(int cantidadTorres) {
-        this.cantidadTorres = cantidadTorres;
-    }
-
     public int getCantidadPisos() {
         return cantidadPisos;
     }
@@ -85,18 +82,18 @@ public class Proyecto {
         this.fechaEntrega = fechaEntrega;
     }
     
-   //Las torres se llaman A,B,C según su posición
-    
+    //Las torres se llaman A, B, C... segun su posicion
     public String nombreTorre(int indice){
-        return String.valueOf((char)('A' + indice));
+        return String.valueOf((char) ('A' + indice));
     }
     
-    public boolean existeTore(String torre){
+    public boolean existeTorre(String torre){
         for (int i = 0; i < cantidadTorres; i++) {
-            if (nombreTorre(i).equalsIgnoreCase(torre)) {
+            if(nombreTorre(i).equalsIgnoreCase(torre)){
                 return true;
             }
         }
         return false;
     }
+    
 }

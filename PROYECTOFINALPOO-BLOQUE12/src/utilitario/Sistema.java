@@ -6,6 +6,9 @@ package utilitario;
 import clases.Empleado;
 import gestion.GestionEmpleado;
 //Clases de Cueto
+import gestion.GestionProyecto;
+import gestion.GestionUnidad;
+import gestion.GestionAdicional;
 
 //Clases de Juan Esteban
 import gestion.GestionCliente;

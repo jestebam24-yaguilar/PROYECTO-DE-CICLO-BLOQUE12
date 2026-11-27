@@ -6,7 +6,7 @@ package clases;
 
 /**
  *
- * @author Antonio
+ * @author Cueto
  */
 public abstract class UnidadInmobiliaria {
     protected String codigo;
@@ -14,25 +14,24 @@ public abstract class UnidadInmobiliaria {
     protected String torre;
     protected int piso;
     protected double areaTechada;
-    protected double arealibre;
+    protected double areaLibre;
     protected int dormitorios;
-    protected String vistas;
+    protected String vista;
     protected double precioM2;
     protected String estado;
 
-    public UnidadInmobiliaria(String codigo, String codigoProyecto, String torre, int piso, double areaTechada, double arealibre, int dormitorios, String vistas, double precioM2, String estado) {
+    public UnidadInmobiliaria(String codigo, String codigoProyecto, String torre, int piso,
+            double areaTechada, double areaLibre, int dormitorios, String vista, double precioM2) {
         this.codigo = codigo;
         this.codigoProyecto = codigoProyecto;
         this.torre = torre;
         this.piso = piso;
         this.areaTechada = areaTechada;
-        this.arealibre = arealibre;
+        this.areaLibre = areaLibre;
         this.dormitorios = dormitorios;
-        this.vistas = vistas;
+        this.vista = vista;
         this.precioM2 = precioM2;
         this.estado = "Disponible";
-        
-        
     }
 
     public String getCodigo() {
@@ -75,12 +74,12 @@ public abstract class UnidadInmobiliaria {
         this.areaTechada = areaTechada;
     }
 
-    public double getArealibre() {
-        return arealibre;
+    public double getAreaLibre() {
+        return areaLibre;
     }
 
-    public void setArealibre(double arealibre) {
-        this.arealibre = arealibre;
+    public void setAreaLibre(double areaLibre) {
+        this.areaLibre = areaLibre;
     }
 
     public int getDormitorios() {
@@ -91,12 +90,12 @@ public abstract class UnidadInmobiliaria {
         this.dormitorios = dormitorios;
     }
 
-    public String getVistas() {
-        return vistas;
+    public String getVista() {
+        return vista;
     }
 
-    public void setVistas(String vistas) {
-        this.vistas = vistas;
+    public void setVista(String vista) {
+        this.vista = vista;
     }
 
     public double getPrecioM2() {
@@ -115,13 +114,14 @@ public abstract class UnidadInmobiliaria {
         this.estado = estado;
     }
     
-    //Metodo concreto: Precio base solo por el area techada
+    //Metodo concreto: precio base solo por el area techada
     public double calcularPrecioBase(){
         return areaTechada * precioM2;
     }
     
-    //Metodos Abstractos: Cada tipo calcula su precio de forma distinta
-    
+    //Metodos abstractos: cada tipo calcula su precio de forma distinta
     public abstract double calcularPrecio();
     public abstract String getTipo();
+    
 }
+
