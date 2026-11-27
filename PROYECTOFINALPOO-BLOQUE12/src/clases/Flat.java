@@ -6,21 +6,21 @@ package clases;
 
 /**
  *
- * @author Antonio
+ * @author Cueto
  */
 public class Flat extends UnidadInmobiliaria {
-    //Reacargo de 1% por cada piso a partir del quinto
-    
+    //Recargo de 1% por cada piso a partir del quinto
     private static final double RECARGO_POR_PISO = 0.01;
 
-    public Flat(String codigo, String codigoProyecto, String torre, int piso, double areaTechada, double arealibre, int dormitorios, String vistas, double precioM2, String estado) {
-        super(codigo, codigoProyecto, torre, piso, areaTechada, arealibre, dormitorios, vistas, precioM2, estado);
+    public Flat(String codigo, String codigoProyecto, String torre, int piso, double areaTechada,
+            double areaLibre, int dormitorios, String vista, double precioM2) {
+        super(codigo, codigoProyecto, torre, piso, areaTechada, areaLibre, dormitorios, vista, precioM2);
     }
 
     @Override
     public double calcularPrecio() {
         double precio = calcularPrecioBase();
-        if (piso >= 5) {
+        if(piso >= 5){
             int pisosConRecargo = piso - 4;
             precio = precio + precio * RECARGO_POR_PISO * pisosConRecargo;
         }
@@ -31,6 +31,5 @@ public class Flat extends UnidadInmobiliaria {
     public String getTipo() {
         return "Flat";
     }
-    
     
 }

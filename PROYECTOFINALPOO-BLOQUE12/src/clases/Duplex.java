@@ -6,24 +6,25 @@ package clases;
 
 /**
  *
- * @author Antonio
+ * @author Cueto
  */
 public class Duplex extends UnidadInmobiliaria {
+    //La terraza (area libre) se valoriza al 50% del precio por m2
     private static final double FACTOR_TERRAZA = 0.50;
 
-    public Duplex(String codigo, String codigoProyecto, String torre, int piso, double areaTechada, double arealibre, int dormitorios, String vistas, double precioM2, String estado) {
-        super(codigo, codigoProyecto, torre, piso, areaTechada, arealibre, dormitorios, vistas, precioM2, estado);
+    public Duplex(String codigo, String codigoProyecto, String torre, int piso, double areaTechada,
+            double areaLibre, int dormitorios, String vista, double precioM2) {
+        super(codigo, codigoProyecto, torre, piso, areaTechada, areaLibre, dormitorios, vista, precioM2);
     }
 
     @Override
     public double calcularPrecio() {
-        return calcularPrecioBase() +  arealibre * precioM2 * FACTOR_TERRAZA;
+        return calcularPrecioBase() + areaLibre * precioM2 * FACTOR_TERRAZA;
     }
 
     @Override
     public String getTipo() {
         return "Duplex";
     }
-    
     
 }
