@@ -26,6 +26,10 @@ public class Sistema {
     public static GestionEmpleado gestionEmpleado = new GestionEmpleado();
     
     //Gestiones de Cueto: proyectos, unidades, adicionales y postventa
+    public static GestionProyecto gestionProyecto = new GestionProyecto();
+    public static GestionUnidad gestionUnidad = new GestionUnidad();
+    public static GestionAdicional gestionAdicional = new GestionAdicional();
+    
     
     //Gestiones de Juan Esteban: clientes y ventas
     public static GestionCliente gestionCliente = new GestionCliente();
