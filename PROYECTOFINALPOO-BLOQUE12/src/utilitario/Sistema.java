@@ -3,8 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package utilitario;
+
 import clases.Empleado;
 import gestion.GestionEmpleado;
+
 //Clases de Cueto
 import gestion.GestionProyecto;
 import gestion.GestionUnidad;
@@ -13,9 +15,6 @@ import gestion.GestionAdicional;
 //Clases de Juan Esteban
 import gestion.GestionCliente;
 import gestion.GestionVenta;
-
-
-
 
 /**
  *
